@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css" />
+    <link href="css/stylePrint.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-12">
+
+                                <div class="tab-content ml-1" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+                                        <img style="width:200px;height:200px; display: block; margin-left: auto; margin-right: auto;" src="img\logo.jpeg" alt="" />
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Booking number</label>
+                                            </div>
+                                            <div id="book" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Full Name</label>
+                                            </div>
+                                            <div id="name" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Email</label>
+                                            </div>
+                                            <div id="email" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Book date</label>
+                                            </div>
+                                            <div id="date" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Address</label>
+                                            </div>
+                                            <div id="address" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Phone</label>
+                                            </div>
+                                            <div id="phone" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Booking type</label>
+                                            </div>
+                                            <div id="bookingType" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Cost</label>
+                                            </div>
+                                            <div id="cost" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Car type</label>
+                                            </div>
+                                            <div id="type" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Board number</label>
+                                            </div>
+                                            <div id="board" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Car model</label>
+                                            </div>
+                                            <div id="model" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    </div>
+                                    <button id="button" onclick="myFunction()" class="btn" type="button">Print</button>
+                                    <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
+                                        Facebook, Google, Twitter Account that are connected to this account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            document.getElementById("button").style.visibility = "hidden";
+            window.print();
+            document.getElementById("button").style.visibility = "visible";
+        }
+    </script>
+    <script>
+        var numBook = Math.random() * 1000000000000000000;
+        var numBookString = numBook.toString().substring(1, 7);
+        document.getElementById("book").textContent = numBookString;
+
+    </script>
+    <script src="js/ScriptPrint.js"></script>
+</body>
+
+</html>

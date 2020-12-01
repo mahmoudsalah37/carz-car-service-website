@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <title>Amagraby 4 Cars</title>
+    <link href="img/taxi.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+</head>
+
+<body>
+
+    <div class="user">
+        <header class="user__header">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+            <h1 class="user__title">Request order</h1>
+        </header>
+
+        <form class="form">
+            <div class="form__group">
+                <input id="fullName" type="text" placeholder="الأسم بالكامل" class="form__input">
+            </div>
+
+            <div class="form__group">
+                <input id="email1" type="email" placeholder="الأيميل" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input id="address1" type="text" placeholder="العنوان" class="form__input">
+            </div>
+
+            <div class="form__group">
+                <input id="date" type="date" placeholder="تاريخ الحجز" class="form__input" />
+            </div>
+            <div class="form__group">
+                <input id="phoneNumber" type="number" placeholder="رقم الهاتف" class="form__input" />
+            </div>
+            <div class="form__group">
+                <input id="carType" type="text" placeholder="نوع العربية" class="form__input">
+            </div>
+            <div class="form__group">
+                <input id="boardNumber" type="text" placeholder="رقم اللوحة" class="form__input">
+            </div>
+            <div class="form__group">
+                <input id="carModel" type="text" placeholder="موديل السيارة" class="form__input">
+            </div>
+            <button class="btn" onclick="btnClick()" type="button">Order</button>
+
+        </form>
+    </div>
+    <script>
+        //var d = Date(Date.now());
+
+        //// Converting the number of millisecond in date string 
+        //a = d.toString().substring(4,24);
+        //document.getElementById('date').value = a;
+        function btnClick() {
+            //document.getElementById("name").textContent = document.getElementById("fullName").textContent;
+            //document.getElementById("email").textContent = document.getElementById("email1").textContent;
+            //document.getElementById("address").textContent = document.getElementById("address1").textContent;
+            //document.getElementById("book").textContent = document.getElementById("numberBook").textContent;
+            //document.getElementById("phone").textContent = document.getElementById("phoneNumber").textContent;
+            //document.getElementById("type").textContent = document.getElementById("carType").textContent;
+            //document.getElementById("board").textContent = document.getElementById("boardNumber").textContent;
+            //document.getElementById("model").textContent = document.getElementById("carModel").textContent;
+            var storage = document.getElementById("fullName").value;
+            localStorage.setItem("storage", storage);
+            var storage1 = document.getElementById("email1").value;
+            localStorage.setItem("storage1", storage1);
+            var storage2 = document.getElementById("address1").value;
+            localStorage.setItem("storage2", storage2);
+            var storage3 = document.getElementById("date").value;
+            localStorage.setItem("storage3", storage3);
+            var storage4 = document.getElementById("phoneNumber").value;
+            localStorage.setItem("storage4", storage4);
+            var storage5 = document.getElementById("carType").value;
+            localStorage.setItem("storage5", storage5);
+            var storage6 = document.getElementById("boardNumber").value;
+            localStorage.setItem("storage6", storage6);
+            var storage7 = document.getElementById("carModel").value;
+            localStorage.setItem("storage7", storage7);
+            window.open("../printOrder_ar.html", "_self");
+
+        }
+    </script>
+    
+    <script src="js/index.js"></script>
+</body>
+
+</html>

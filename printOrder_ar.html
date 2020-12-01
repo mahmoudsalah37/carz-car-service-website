@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css" />
+    <link href="css/stylePrint.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="container" dir="rtl">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row" dir="rtl">
+                            <div class="col-12">
+
+                                <div class="tab-content ml-1" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+                                        <img style="width:200px;height:200px; display: block; margin-left: auto; margin-right: auto;" src="img\logo.jpeg" alt="" />
+                                        <hr />
+                                        <div class="row" dir="rtl">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">رقم الحجز</label>
+                                            </div>
+                                            <div id="book" class="col-md-8 col-6" dir="rtl">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">الأسم بالكامل</label>
+                                            </div>
+                                            <div id="name" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">الأيميل</label>
+                                            </div>
+                                            <div id="email" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">تاريخ الحجز</label>
+                                            </div>
+                                            <div id="date" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">العنوان</label>
+                                            </div>
+                                            <div id="address" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">الهاتف</label>
+                                            </div>
+                                            <div id="phone" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">نوع الحجز</label>
+                                            </div>
+                                            <div id="bookingType" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">التكلفة</label>
+                                            </div>
+                                            <div id="cost" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">نوع العربية</label>
+                                            </div>
+                                            <div id="type" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">رقم اللوحة</label>
+                                            </div>
+                                            <div id="board" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">موديل السيارة</label>
+                                            </div>
+                                            <div id="model" class="col-md-8 col-6">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    </div>
+                                    <hr />
+                                    <button id="button" onclick="myFunction()" class="btn" type="button">Print</button>
+                                    <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
+                                        Facebook, Google, Twitter Account that are connected to this account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            document.getElementById("button").style.visibility = "hidden";
+            window.print();
+            document.getElementById("button").style.visibility = "visible";
+        }
+    </script>
+    <script>
+        var numBook = Math.random() * 1000000000000000000;
+        var numBookString = numBook.toString().substring(1, 7);
+        document.getElementById("book").textContent = numBookString;
+    </script>
+    <script src="js/ScriptPrint.js"></script>
+</body>
+
+</html>
